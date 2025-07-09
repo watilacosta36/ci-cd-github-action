@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Display workdir and list files
 #        shell: pwsh AQUI rodaria o shell pwsh para o step
+#        work-directory: mesma coisa do shell
         run: |
           pwd
           ls -a
