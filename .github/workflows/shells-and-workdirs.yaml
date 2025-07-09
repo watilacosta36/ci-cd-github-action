@@ -3,14 +3,31 @@ run-name: Shell e diretorios de trabalho
 
 on:
   push:
+
+# EXECUTA O SHWLL pwsh em todos os jobs
+#defaults:
+#  run:
+#    shell: pwsh
+
 jobs:
   display-workdir-info:
+    # EXECUTA O SHWLL pwsh neste job especfico
+    #defaults:
+    #  run:
+    #    shell: pwsh
     runs-on: ubuntu-latest
     steps:
       - name: Display workdir and list files
+#        shell: pwsh AQUI rodaria o shell pwsh para o step
         run: |
           pwd
           ls -a
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+
+      - name: Python Shell
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
