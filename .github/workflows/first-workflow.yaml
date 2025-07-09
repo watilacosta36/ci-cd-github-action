@@ -2,7 +2,7 @@ name: first-workflow
 run-name: Firt Workflow
 
 on:
-  - push
+  push:
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
