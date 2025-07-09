@@ -1,0 +1,15 @@
+name: first-workflow
+run-name: Firt Workflow
+
+on:
+  - push
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: First step
+      run: echo "First step"
+
+    
+
+
